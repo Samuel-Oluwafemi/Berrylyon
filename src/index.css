@@ -96,6 +96,11 @@ img {
   gap: 12px;
 }
 
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -832,12 +837,104 @@ img {
 }
 
 .site-footer {
+  margin-top: 32px;
+  padding: 42px 44px 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(201, 165, 92, 0.13), transparent 38%),
+    #191917;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(140px, 0.7fr) minmax(140px, 0.7fr);
+  gap: 44px;
+  padding-bottom: 38px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.footer-brand .brand-mark {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.footer-brand .brand-name {
+  font-size: 1.15rem;
+}
+
+.footer-brand-column p {
+  max-width: 330px;
+  margin: 20px 0 18px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.footer-email {
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.footer-column h2 {
+  margin: 2px 0 7px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover,
+.footer-bottom a:hover,
+.footer-email:hover {
+  color: var(--gold);
+}
+
+.footer-socials a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.footer-socials a span {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 30px 0 10px;
-  color: var(--muted);
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
 }
 
 .footer-links {
@@ -977,8 +1074,21 @@ img {
   }
 
   .site-footer {
+    padding: 32px 24px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 20px;
+  }
+
+  .footer-brand-column {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
     flex-direction: column;
-    text-align: center;
   }
 }
 
