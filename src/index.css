@@ -937,6 +937,26 @@ img {
   font-size: 0.75rem;
 }
 
+.footer-credit {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.footer-credit a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 165, 92, 0.55);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+  color: var(--gold);
+}
+
 .footer-links {
   display: flex;
   gap: 18px;

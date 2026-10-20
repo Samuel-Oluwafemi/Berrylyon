@@ -46,6 +46,16 @@ export default function FooterSection() {
         <span>© {new Date().getFullYear()} BerryLyon. All rights reserved.</span>
         <a href="#home">Back to top ↑</a>
       </div>
+      <p className="footer-credit">
+        Designed &amp; built by{" "}
+        <a
+          href="https://samueloluwafemi.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Samuel Oluwafemi
+        </a>
+      </p>
     </footer>
   );
 }
